@@ -8,6 +8,9 @@ import { openSource } from "../../portfolio";
 
 export default function Projects() {
   const [repo, setrepo] = useState([]);
+  const rep = [{
+    "name":"karunyaFeed"
+  }]
 
   useEffect(() => {
     getRepoData();
@@ -69,11 +72,12 @@ export default function Projects() {
     <div className="main" id="opensource">
       <h1 className="project-title">Open Source Projects</h1>
       <div className="repo-cards-div-main">
-        {repo.map((v, i) => {
+        {/* {repo.map((v, i) => {
           return <GithubRepoCard repo={v} key={v.node.id} />;
-        })}
+        })} */}
+        projects
       </div>
-      <Button text={"More Projects"} className="project-button" href="https://github.com/ashutosh1919" newTab={true} />
+      <Button text={"View Projects"} className="project-button" href="https://github.com/nagaveda" newTab={true} />
     </div>
   );
 }
